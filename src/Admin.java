@@ -26,10 +26,11 @@ public class Admin {
                 break;
             // Update
             case 2:
-
+                flights.updateFlight();
                 break;
             // Remove
             case 3:
+
                 break;
             // Flight List
             case 4:
