@@ -7,6 +7,9 @@ Yazd University
 
 TAs: [Mohsen Gholami](https://about.me/iMohsen02) - [Pooria Azami](https://github.com/pooriaazami)
 
+Author : [Aref Najmaddini](https://github.com/ArefNj)
+Email : Aref.Najmaddini@gmail.com
+
 ---
 
 **AIRLINES RESERVATION SYSTEM**
