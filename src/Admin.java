@@ -30,7 +30,7 @@ public class Admin {
                 break;
             // Remove
             case 3:
-
+                flights.removeFlight();
                 break;
             // Flight List
             case 4:

@@ -142,6 +142,22 @@ public class Flights {
 
     }
 
+    public void removeFlight(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(" Please enter the Flight Id Which flight do yo want to remove ");
+        String flightId = scanner.nextLine();
+
+        int flightIndex = findFlightIndex(flightId);
+
+        if (flightIndex == -1){
+            System.out.println("Please check your entry ");
+            new Menu().pause();
+            return;
+        }
+        flights.remove(flightIndex);
+
+    }
+
 
 
     public ArrayList<Flight> getFlights() {
