@@ -173,14 +173,20 @@ public class Menu {
                 String newPassengerPassword = scan.nextLine();
                 userList.changePassword(passengerIndex,newPassengerPassword);
                 break;
+                // searching
             case 2:
+                flightsList.filterFlight();
                 break;
+                // booking
             case 3:
                 break;
+                // cancel
             case 4:
                 break;
+                // see booked
             case 5:
                 break;
+                // add charge
             case 6:
                 userList.chargeAccount(passengerIndex);
                 break;

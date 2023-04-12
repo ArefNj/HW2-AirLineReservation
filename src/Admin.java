@@ -10,10 +10,6 @@ public class Admin {
         }
         return singletonAdmin;
     }
-
-
-
-
     public void admin(Users users, Flights flights) {
         Scanner scan = new Scanner(System.in);
         new Menu().printAdminMenu();
@@ -48,10 +44,4 @@ public class Admin {
         this.admin(users,flights);
 
     }
-
-
-
-
-
-
 }
