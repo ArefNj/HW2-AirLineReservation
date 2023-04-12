@@ -136,7 +136,6 @@ public class Menu {
         String tempPass = scan.nextLine();
         // Admin Entry point
         if (tempId.equals("Admin") && tempPass.equals("Admin")){
-            printAdminMenu();
             Admin admin = Admin.getInstance();
             admin.admin(userList,flightsList);
             System.out.println("Have Nice Day !");
@@ -191,6 +190,9 @@ public class Menu {
                 this.menu();
                 break;
             default:
+                System.out.println("please check your entry");
+                pause();
+                this.passengerMenu(passengerIndex);
                 break;
         }
 

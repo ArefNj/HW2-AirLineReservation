@@ -1,7 +1,8 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Flights {
-    private ArrayList<Flight> flights;
+    private ArrayList<Flight> flights = new ArrayList<Flight>();
 
     public int searchFlight(int searchFilter,String filterParam){
 
@@ -32,7 +33,7 @@ public class Flights {
 
     public void printFlight(int flightIndex, ArrayList<Flight> passengerFlight){
         System.out.println("...................................................................................");
-        System.out.printf("|%s11|%s11|%s11|%s11|%s11|%,d11|%d11|"   ,passengerFlight.get(flightIndex).getFlightID()
+        System.out.printf("|%-11s|%-11s|%-13s|%-12s|%-11s|%-,11d|%-6d|\n"   ,passengerFlight.get(flightIndex).getFlightID()
                                                                     ,passengerFlight.get(flightIndex).getOrigen()
                                                                     ,passengerFlight.get(flightIndex).getDestination()
                                                                     ,passengerFlight.get(flightIndex).getDate()
@@ -46,5 +47,28 @@ public class Flights {
     }
     public void setFlights(ArrayList<Flight> flights) {
         this.flights = flights;
+    }
+
+    public void addFlight(){
+        Scanner scan = new Scanner(System.in);
+        Flight newFlight = new Flight();
+        System.out.println("Enter Flight Id");
+        newFlight.setFlightID(scan.nextLine());
+        System.out.println("Enter The Origen");
+        newFlight.setOrigen(scan.nextLine());
+        System.out.println("enter the Destination");
+        newFlight.setDestination(scan.nextLine());
+        System.out.println("enter the date");
+        newFlight.setDate(scan.nextLine());
+        System.out.println("enter Time");
+        newFlight.setTime(scan.nextLine());
+        System.out.println("enter Price");
+        newFlight.setPrice(scan.nextInt());
+        System.out.println("enter number of seats");
+        newFlight.setSeats(scan.nextInt());
+        newFlight.setBookedSeats(0);
+
+
+        flights.add(newFlight);
     }
 }
