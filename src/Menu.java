@@ -179,12 +179,15 @@ public class Menu {
                 break;
                 // booking
             case 3:
+                userList.booking(passengerIndex,flightsList);
                 break;
                 // cancel
             case 4:
+                userList.removeFromBookedList(passengerIndex,flightsList);
                 break;
                 // see booked
             case 5:
+                userList.printBookedList(passengerIndex, flightsList);
                 break;
                 // add charge
             case 6:

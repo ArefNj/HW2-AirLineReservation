@@ -91,7 +91,7 @@ public class Flights {
     }
 
     public void printFlightHeader(){
-        System.out.println("|FlightId   |Origin     |Destination  |Date        |Time       |Price      |Seats |");
+        System.out.println("|FlightId   |Origin     |Destination  |Date        |Time       |Price      |Seats |Booked Seats|");
     }
 
     public void printFlight(ArrayList<Flight> passengerFlight){
@@ -101,14 +101,16 @@ public class Flights {
     }
 
     public void printFlight(int flightIndex, ArrayList<Flight> passengerFlight){
-        System.out.println("...................................................................................");
-        System.out.printf("|%-11s|%-11s|%-13s|%-12s|%-11s|%-,11d|%-6d|\n"   ,passengerFlight.get(flightIndex).getFlightID()
-                                                                    ,passengerFlight.get(flightIndex).getOrigen()
-                                                                    ,passengerFlight.get(flightIndex).getDestination()
-                                                                    ,passengerFlight.get(flightIndex).getDate()
-                                                                    ,passengerFlight.get(flightIndex).getTime()
-                                                                    ,passengerFlight.get(flightIndex).getPrice()
-                                                                    ,passengerFlight.get(flightIndex).getSeats());
+        System.out.println("................................................................................................");
+        System.out.printf("|%-11s|%-11s|%-13s|%-12s|%-11s|%-,11d|%-6d|%-12d|\n"
+                ,passengerFlight.get(flightIndex).getFlightID()
+                ,passengerFlight.get(flightIndex).getOrigen()
+                ,passengerFlight.get(flightIndex).getDestination()
+                ,passengerFlight.get(flightIndex).getDate()
+                ,passengerFlight.get(flightIndex).getTime()
+                ,passengerFlight.get(flightIndex).getPrice()
+                ,passengerFlight.get(flightIndex).getSeats()
+                ,passengerFlight.get(flightIndex).getBookedSeats());
     }
 
     public int findFlightIndex(String targetFlightId){

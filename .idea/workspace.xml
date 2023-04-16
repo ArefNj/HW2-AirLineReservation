@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="188a9340-50cf-4872-a7bc-f2a91a06ed3b" name="Changes" comment="add remove section">
+    <list default="true" id="188a9340-50cf-4872-a7bc-f2a91a06ed3b" name="Changes" comment="add filter search section">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Flights.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Flights.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Singleton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Passenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +59,8 @@
       <workItem from="1681228570883" duration="3412000" />
       <workItem from="1681232133189" duration="18723000" />
       <workItem from="1681308372044" duration="7022000" />
-      <workItem from="1681318656836" duration="4887000" />
+      <workItem from="1681318656836" duration="12769000" />
+      <workItem from="1681620640994" duration="3361000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1681280786975</created>
@@ -89,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681313094808</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add filter search section">
+      <created>1681324242456</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681324242456</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +119,7 @@
     <MESSAGE value="Add AddFlight Section, Fixing flight table" />
     <MESSAGE value="add update section" />
     <MESSAGE value="add remove section" />
-    <option name="LAST_COMMIT_MESSAGE" value="add remove section" />
+    <MESSAGE value="add filter search section" />
+    <option name="LAST_COMMIT_MESSAGE" value="add filter search section" />
   </component>
 </project>
