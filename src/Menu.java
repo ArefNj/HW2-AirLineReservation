@@ -85,16 +85,13 @@ public class Menu {
         printMainMenu();
         int mainMenuKey = scan.nextInt();
 
-        switch (mainMenuKey){
-            case 1:
-                signIn();
-                break;
-            case 2 :
-                signUp();
-                break;
-            default:
+        switch (mainMenuKey) {
+            case 1 -> signIn();
+            case 2 -> signUp();
+            default -> {
                 System.out.println("Please Enter the proper value");
                 pause();
+            }
         }
         this.menu();
     }
@@ -165,44 +162,38 @@ public class Menu {
         int key = scan.nextInt();
 
 
-        switch (key){
+        switch (key) {
             // change Password
-            case 1:
+            case 1 -> {
                 System.out.print("Enter new password\n");
                 scan.nextLine();
                 String newPassengerPassword = scan.nextLine();
-                userList.changePassword(passengerIndex,newPassengerPassword);
-                break;
-                // searching
-            case 2:
-                flightsList.filterFlight();
-                break;
-                // booking
-            case 3:
-                userList.booking(passengerIndex,flightsList);
-                break;
-                // cancel
-            case 4:
-                userList.removeFromBookedList(passengerIndex,flightsList);
-                break;
-                // see booked
-            case 5:
-                userList.printBookedList(passengerIndex, flightsList);
-                break;
-                // add charge
-            case 6:
-                userList.chargeAccount(passengerIndex);
-                break;
-            case 0:
+                userList.changePassword(passengerIndex, newPassengerPassword);
+            }
+            // searching
+            case 2 -> flightsList.filterFlight();
+
+            // booking
+            case 3 -> userList.booking(passengerIndex, flightsList);
+
+            // cancel
+            case 4 -> userList.removeFromBookedList(passengerIndex, flightsList);
+
+            // see booked
+            case 5 -> userList.printBookedList(passengerIndex, flightsList);
+
+            // add charge
+            case 6 -> userList.chargeAccount(passengerIndex);
+            case 0 -> {
                 System.out.println(" Have nice day !");
                 pause();
                 this.menu();
-                break;
-            default:
+            }
+            default -> {
                 System.out.println("please check your entry");
                 pause();
                 this.passengerMenu(passengerIndex);
-                break;
+            }
         }
 
         this.passengerMenu(passengerIndex);
