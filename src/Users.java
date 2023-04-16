@@ -4,18 +4,10 @@ import java.util.Scanner;
 public class Users {
     private ArrayList<Passenger> users = new ArrayList<Passenger>(10);
 
-
-    public ArrayList<Passenger> getPassengers() {
-        return users;
-    }
-    public void setPassengers(ArrayList<Passenger> passengers) {
-        users = passengers;
-    }
-
     // Search
     public boolean searchUser(String targetId){
-        for (int i = 0; i < users.size(); i++) {
-            if (users.get(i).getPassengerID().equals(targetId)){
+        for (Passenger user : users) {
+            if (user.getPassengerID().equals(targetId)) {
                 return true;
             }
         }
@@ -40,9 +32,9 @@ public class Users {
 
         System.out.println("Please Enter Flight Id");
         String tempFlightId = scan.nextLine();
-        Passenger tempPassenger = new Passenger();
-        tempPassenger = users.get(passengerIndex);
-        Flight tempFlight = new Flight();
+
+        Flight tempFlight;
+        ArrayList<Flight> tempFlightList;
 
         // Searching
         int tempFlightIndex = flights.findFlightIndex(tempFlightId);
@@ -55,7 +47,6 @@ public class Users {
         }
 
         tempFlight = flights.getFlights().get(tempFlightIndex);
-        ArrayList<Flight> tempFlightList = new ArrayList<Flight>();
         tempFlightList = users.get(passengerIndex).getPassengerFlights();
 
         // return if the Passenger account has not enough charge
@@ -119,7 +110,7 @@ public class Users {
             return;
         }
 
-        ArrayList<Flight> tempFlights = new ArrayList<Flight>();
+        ArrayList<Flight> tempFlights;
         tempFlights = users.get(passengerIndex).getPassengerFlights();
         Flight tempFlight = tempFlights.get(searchingIndexForAllFlights);
         int searchingIndexForPassengerFlights = tempFlights.indexOf(tempFlight);
@@ -159,8 +150,7 @@ public class Users {
 
     }
     public void changePassword(int index, String newPass){
-    Passenger tempPassenger = new Passenger();
-    tempPassenger = users.get(index);
+    Passenger tempPassenger = users.get(index);
     tempPassenger.setPassword(newPass);
     users.set(index,tempPassenger);
 
@@ -168,8 +158,7 @@ public class Users {
 
     public void chargeAccount(int index){
         Scanner scan = new Scanner(System.in);
-        Passenger tempPassenger = new Passenger();
-        tempPassenger = users.get(index);
+        Passenger tempPassenger = users.get(index);
         System.out.println("Your Balance : " + tempPassenger.getCharge());
 
         System.out.println("enter how much do you want to charge your account ");

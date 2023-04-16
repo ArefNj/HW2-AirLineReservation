@@ -182,14 +182,6 @@ public class Flights {
         }
     }
 
-    public int findFlightIndex(int targetFlightPrice){
-        for (int i = 0; i < flights.size(); i++) {
-            if (flights.get(i).getPrice() <= targetFlightPrice){
-                return i;
-            }
-        }
-        return -1;
-    }
 
     public void updateFlight(){
         Scanner scanner = new Scanner(System.in);
@@ -302,9 +294,6 @@ public class Flights {
 
     public ArrayList<Flight> getFlights() {
         return flights;
-    }
-    public void setFlights(ArrayList<Flight> flights) {
-        this.flights = flights;
     }
 
     public void addFlight(){
