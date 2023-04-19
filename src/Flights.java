@@ -4,91 +4,6 @@ import java.util.Scanner;
 public class Flights {
     private ArrayList<Flight> flights = new ArrayList<>();
 
-//    public void filterFlight() {
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("< choose search method >");
-//        System.out.print("""
-//                <1> by Flight Id
-//                <2> by Origen
-//                <3> by destination
-//                <4> by Date
-//                <5> by Time
-//                <6> by prise
-//                <7> Show All
-//                <0> Exit
-//
-//                -->""");
-//        int searchKey = scanner.nextInt();
-//        switch (searchKey) {
-//            case 1:
-//                System.out.println("Enter the flight Id");
-//                scanner.nextLine();
-//                String tempId = scanner.nextLine();
-//                int index = findFlightIndex(tempId);
-//                if (index == -1) {
-//                    System.out.println("nothing found !");
-//                    new Menu().pause();
-//                    break;
-//                }
-//                printFlight(index, flights);
-//                break;
-//            case 2:
-//                System.out.println("Enter the Origen");
-//                scanner.nextLine();
-//                String tempOrigen = scanner.nextLine();
-//                findFlightIndexOrigenAndPrint(tempOrigen);
-//                break;
-//            case 3:
-//                System.out.println("Enter the Destination");
-//                scanner.nextLine();
-//                String tempDestination = scanner.nextLine();
-//                findFlightIndexDestinationAndPrint(tempDestination);
-//                break;
-//            case 4:
-//                System.out.println("Enter the Date");
-//                scanner.nextLine();
-//                String tempDate = scanner.nextLine();
-//                findFlightIndexDateAndPrint(tempDate);
-//                break;
-//            case 5:
-//                System.out.println("Enter the Date");
-//                scanner.nextLine();
-//                String tempTime = scanner.nextLine();
-//                findFlightIndexTimeAndPrint(tempTime);
-//                break;
-//            case 6:
-//                System.out.println("Input the maximum price");
-//                int maxPrice = scanner.nextInt();
-//                boolean flag = false;
-//                for (int i = 0; i < flights.size(); i++) {
-//                    if (flights.get(i).getPrice() <= maxPrice) {
-//                        if (!flag) {
-//                            flag = true;
-//                            printFlightHeader();
-//                        }
-//                        printFlight(i, flights);
-//                    }
-//                }
-//                if (!flag) {
-//                    System.out.println("nothing found !");
-//                }
-//                break;
-//            case 7:
-//                printFlightHeader();
-//                printFlight(flights);
-//                break;
-//
-//            case 0:
-//                return;
-//
-//            default:
-//                System.out.println("please check your entry");
-//                new Menu().pause();
-//                break;
-//        }
-//
-//        this.filterFlight();
-//    }
 
     public void filterFlight(ArrayList<Flight> flightsList) {
         Scanner scanner = new Scanner(System.in);
@@ -151,8 +66,7 @@ public class Flights {
 
                         }
                     }
-                }
-                else {
+                } else {
                     printFlightHeader();
                     printFlight(tempFlights);
                 }
@@ -240,53 +154,7 @@ public class Flights {
 //        }
 //    }
 //
-//    public void findFlightIndexDestinationAndPrint(String targetDestination) {
-//        boolean somethingFound = false;
-//        for (int i = 0; i < flights.size(); i++) {
-//            if (flights.get(i).getDestination().equals(targetDestination)) {
-//                if (!somethingFound) {
-//                    printFlightHeader();
-//                }
-//                somethingFound = true;
-//                printFlight(i, flights);
-//            }
-//        }
-//        if (!somethingFound) {
-//            System.out.println("nothing found !");
-//        }
-//    }
-//
-//    public void findFlightIndexDateAndPrint(String targetDate) {
-//        boolean somethingFound = false;
-//        for (int i = 0; i < flights.size(); i++) {
-//            if (flights.get(i).getDate().equals(targetDate)) {
-//                if (!somethingFound) {
-//                    printFlightHeader();
-//                }
-//                somethingFound = true;
-//                printFlight(i, flights);
-//            }
-//        }
-//        if (!somethingFound) {
-//            System.out.println("nothing found !");
-//        }
-//    }
-//
-//    public void findFlightIndexTimeAndPrint(String targetTime) {
-//        boolean somethingFound = false;
-//        for (int i = 0; i < flights.size(); i++) {
-//            if (flights.get(i).getTime().equals(targetTime)) {
-//                if (!somethingFound) {
-//                    printFlightHeader();
-//                }
-//                somethingFound = true;
-//                printFlight(i, flights);
-//            }
-//        }
-//        if (!somethingFound) {
-//            System.out.println("nothing found !");
-//        }
-//    }
+
 
     public void updateFlight() {
         Scanner scanner = new Scanner(System.in);
