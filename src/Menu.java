@@ -6,6 +6,31 @@ public class Menu {
     private Users userList = new Users();
     private Flights flightsList = new Flights();
 
+
+    public void printSignUpMenuHeader() {
+        System.out.print("""
+                ::::::::::::::::::::::::::::::::::::::::
+                               Sign Up Menu
+                ::::::::::::::::::::::::::::::::::::::::
+                 ......................................
+                          
+                                
+                """);
+    }
+
+    public void printSignInMenuHeader() {
+        System.out.print("""
+                ::::::::::::::::::::::::::::::::::::::::
+                               Sign In Menu
+                ::::::::::::::::::::::::::::::::::::::::
+                 ......................................
+                          
+                                
+                                
+                """);
+    }
+
+
     public void printMainMenu() {
         System.out.print("""
                 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -54,46 +79,6 @@ public class Menu {
                     
                     
                 -->\040""");
-    }
-
-    public void printSignUpMenuHeader() {
-        System.out.print("""
-                ::::::::::::::::::::::::::::::::::::::::
-                               Sign Up Menu
-                ::::::::::::::::::::::::::::::::::::::::
-                 ......................................
-                          
-                                
-                """);
-    }
-
-    public void printSignInMenuHeader() {
-        System.out.print("""
-                ::::::::::::::::::::::::::::::::::::::::
-                               Sign In Menu
-                ::::::::::::::::::::::::::::::::::::::::
-                 ......................................
-                          
-                                
-                                
-                """);
-    }
-
-    public void menu() {
-        Scanner scan = new Scanner(System.in);
-
-        printMainMenu();
-        int mainMenuKey = scan.nextInt();
-
-        switch (mainMenuKey) {
-            case 1 -> signIn();
-            case 2 -> signUp();
-            default -> {
-                System.out.println("Please Enter the proper value");
-                pause();
-            }
-        }
-        this.menu();
     }
 
     public void signUp() {
@@ -172,7 +157,7 @@ public class Menu {
                 userList.changePassword(passengerIndex, newPassengerPassword);
             }
             // searching
-            case 2 -> flightsList.filterFlight();
+            case 2 -> flightsList.filterFlight(flightsList.getFlights());
 
             // booking
             case 3 -> userList.booking(passengerIndex, flightsList);
@@ -201,6 +186,24 @@ public class Menu {
 
 
     }
+
+    public void menu() {
+        Scanner scan = new Scanner(System.in);
+
+        printMainMenu();
+        int mainMenuKey = scan.nextInt();
+
+        switch (mainMenuKey) {
+            case 1 -> signIn();
+            case 2 -> signUp();
+            default -> {
+                System.out.println("Please Enter the proper value");
+                pause();
+            }
+        }
+        this.menu();
+    }
+
 
     public void pause() {
         System.out.println("Press Any Key To Continue...");

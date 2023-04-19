@@ -3,14 +3,14 @@ import java.util.Scanner;
 public class Admin {
     private static Admin singletonAdmin;
 
-    private Admin() {
-    }
-
     public static Admin getInstance() {
         if (singletonAdmin == null) {
             singletonAdmin = new Admin();
         }
         return singletonAdmin;
+    }
+
+    private Admin() {
     }
 
     public void admin(Users users, Flights flights) {
