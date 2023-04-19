@@ -141,20 +141,6 @@ public class Flights {
         }
     }
 
-//    public void findFlightIndexOrigenAndPrint(String targetFlightOrigen) {
-//        boolean somethingFound = false;
-//        for (int i = 0; i < flights.size(); i++) {
-//            if (flights.get(i).getOrigen().equals(targetFlightOrigen)) {
-//                somethingFound = true;
-//                printFlight(i, flights);
-//            }
-//        }
-//        if (!somethingFound) {
-//            System.out.println("nothing found !");
-//        }
-//    }
-//
-
 
     public void updateFlight() {
         Scanner scanner = new Scanner(System.in);
