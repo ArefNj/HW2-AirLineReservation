@@ -107,7 +107,7 @@ public class Menu {
             this.menu();
         }
 
-        if (userList.searchUser(tempId) || tempId.equals("Admin")) {
+        if (userList.findUserIndex(tempId) != -1 || tempId.equals("Admin")) {
             System.out.println("The User name was Token");
             pause();
             this.signUp();

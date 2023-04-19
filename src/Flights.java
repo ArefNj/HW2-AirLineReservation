@@ -187,6 +187,11 @@ public class Flights {
     }
 
 
+
+
+
+
+
     public void updateFlight() {
         Scanner scanner = new Scanner(System.in);
         System.out.println(" Please enter the Flight Id Which flight do yo want to update ");
@@ -287,6 +292,12 @@ public class Flights {
 
         if (flightIndex == -1) {
             System.out.println("Please check your entry ");
+            new Menu().pause();
+            return;
+        }
+
+        if (flights.get(flightIndex).getBookedSeats() != 0){
+            System.out.println("you cannot remove this flight because someone booked this flight");
             new Menu().pause();
             return;
         }

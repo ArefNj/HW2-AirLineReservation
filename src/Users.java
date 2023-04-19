@@ -4,16 +4,28 @@ import java.util.Scanner;
 public class Users {
     private ArrayList<Passenger> users = new ArrayList<Passenger>(10);
 
-    // Search
-    public boolean searchUser(String targetId) {
-        for (Passenger user : users) {
-            if (user.getPassengerID().equals(targetId)) {
-                return true;
+    /**
+     * Searching an id form User ArrayList
+     *
+     * @param targetId the id we're looking for
+     * @return The indexOf the targetId ( return -1 if it was not found )
+     */
+    public int findUserIndex(String targetId) {
+        for (int i = 0; i < users.size(); i++) {
+            if (users.get(i).getPassengerID().equals(targetId)) {
+                return i;
             }
         }
-
-        return false;
+        return -1;
     }
+
+    /**
+     * Searching an id form User ArrayList with Password for signIn section
+     *
+     * @param targetId   the id we're looking for
+     * @param targetPass the password we're looking for
+     * @return The indexOf the targetId ( return -1 if it was not found )
+     */
 
     public int findUserIndex(String targetId, String targetPass) {
         for (int i = 0; i < users.size(); i++) {
@@ -134,7 +146,6 @@ public class Users {
         new Menu().pause();
 
     }
-
 
     public void creatNewUser(String id, String password) {
         Passenger passenger = new Passenger();
