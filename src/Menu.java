@@ -121,7 +121,7 @@ public class Menu {
         // Admin Entry point
         if (tempId.equals("Admin") && tempPass.equals("Admin")) {
             Admin admin = Admin.getInstance();
-            admin.admin(userList, flightsList);
+            admin.admin(flightsList);
             System.out.println("Have Nice Day !");
             pause();
             this.menu();

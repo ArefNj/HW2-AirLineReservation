@@ -4,7 +4,7 @@ public class Passenger {
 
     private String passengerID;
     private String Password;
-    private ArrayList<Flight> passengerFlights = new ArrayList<Flight>();
+    private ArrayList<Flight> passengerFlights = new ArrayList<>();
     private int charge;
 
 

@@ -8,7 +8,6 @@ public class Flight {
     private int seats;
     private int bookedSeats;
 
-
     // SETTER & GETTER
     public String getFlightID() {
         return flightID;

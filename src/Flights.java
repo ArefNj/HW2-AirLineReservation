@@ -1,9 +1,8 @@
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Scanner;
 
 public class Flights {
-    private ArrayList<Flight> flights = new ArrayList<Flight>();
+    private ArrayList<Flight> flights = new ArrayList<>();
 
 //    public void filterFlight() {
 //        Scanner scanner = new Scanner(System.in);
@@ -97,7 +96,7 @@ public class Flights {
                 Do you want to show you all Flights
                 <1> Yes
                 <2> No
-                <0> return to Passenger flight
+                <0> return
                                 
                 -->
                 """);
@@ -122,31 +121,41 @@ public class Flights {
 
                 ArrayList<Flight> tempFlights = new ArrayList<>(flightsList);
 
-                printFlightHeader();
-
                 if (!origen.equals("X")) {
                     filterFlightsByOrigen(origen, tempFlights);
                 }
                 if (!destination.equals("X")) {
                     filterFlightsByDestination(destination, tempFlights);
                 }
-
                 if (!date.equals("X")) {
                     filterFlightsByDate(date, tempFlights);
                 }
-
                 if (!time.equals("X")) {
                     filterFlightsByTime(time, tempFlights);
                 }
-
                 if (price.equals("Y")) {
-                    System.out.println("enter Minimum price");
-                    int min = scanner.nextInt();
-                    System.out.println("enter Maximum price");
-                    int max = scanner.nextInt();
-                }
+                    System.out.println("Input the maximum price");
+                    int maxPrice = scanner.nextInt();
+                    System.out.println("Input the minimum price ");
+                    int minPrice = scanner.nextInt();
+                    boolean flag = false;
+                    for (int i = tempFlights.size() - 1; i >= 0; i--) {
+                        if (tempFlights.get(i).getPrice() <= maxPrice) {
+                            if (tempFlights.get(i).getPrice() >= minPrice) {
+                                if (!flag) {
+                                    flag = true;
+                                    printFlightHeader();
+                                }
+                                printFlight(i, tempFlights);
+                            }
 
-                printFlight(tempFlights);
+                        }
+                    }
+                }
+                else {
+                    printFlightHeader();
+                    printFlight(tempFlights);
+                }
 
 
                 break;
@@ -167,6 +176,7 @@ public class Flights {
         for (int i = 0; i < passengerFlight.size(); i++) {
             printFlight(i, passengerFlight);
         }
+        new Menu().pause();
     }
 
     public void printFlight(int flightIndex, ArrayList<Flight> passengerFlight) {
@@ -217,66 +227,66 @@ public class Flights {
         }
     }
 
-    public void findFlightIndexOrigenAndPrint(String targetFlightOrigen) {
-        boolean somethingFound = false;
-        for (int i = 0; i < flights.size(); i++) {
-            if (flights.get(i).getOrigen().equals(targetFlightOrigen)) {
-                somethingFound = true;
-                printFlight(i, flights);
-            }
-        }
-        if (!somethingFound) {
-            System.out.println("nothing found !");
-        }
-    }
-
-    public void findFlightIndexDestinationAndPrint(String targetDestination) {
-        boolean somethingFound = false;
-        for (int i = 0; i < flights.size(); i++) {
-            if (flights.get(i).getDestination().equals(targetDestination)) {
-                if (!somethingFound) {
-                    printFlightHeader();
-                }
-                somethingFound = true;
-                printFlight(i, flights);
-            }
-        }
-        if (!somethingFound) {
-            System.out.println("nothing found !");
-        }
-    }
-
-    public void findFlightIndexDateAndPrint(String targetDate) {
-        boolean somethingFound = false;
-        for (int i = 0; i < flights.size(); i++) {
-            if (flights.get(i).getDate().equals(targetDate)) {
-                if (!somethingFound) {
-                    printFlightHeader();
-                }
-                somethingFound = true;
-                printFlight(i, flights);
-            }
-        }
-        if (!somethingFound) {
-            System.out.println("nothing found !");
-        }
-    }
-
-    public void findFlightIndexTimeAndPrint(String targetTime) {
-        boolean somethingFound = false;
-        for (int i = 0; i < flights.size(); i++) {
-            if (flights.get(i).getTime().equals(targetTime)) {
-                if (!somethingFound) {
-                    printFlightHeader();
-                }
-                somethingFound = true;
-                printFlight(i, flights);
-            }
-        }
-        if (!somethingFound) {
-            System.out.println("nothing found !");
-        }
-    }
+//    public void findFlightIndexOrigenAndPrint(String targetFlightOrigen) {
+//        boolean somethingFound = false;
+//        for (int i = 0; i < flights.size(); i++) {
+//            if (flights.get(i).getOrigen().equals(targetFlightOrigen)) {
+//                somethingFound = true;
+//                printFlight(i, flights);
+//            }
+//        }
+//        if (!somethingFound) {
+//            System.out.println("nothing found !");
+//        }
+//    }
+//
+//    public void findFlightIndexDestinationAndPrint(String targetDestination) {
+//        boolean somethingFound = false;
+//        for (int i = 0; i < flights.size(); i++) {
+//            if (flights.get(i).getDestination().equals(targetDestination)) {
+//                if (!somethingFound) {
+//                    printFlightHeader();
+//                }
+//                somethingFound = true;
+//                printFlight(i, flights);
+//            }
+//        }
+//        if (!somethingFound) {
+//            System.out.println("nothing found !");
+//        }
+//    }
+//
+//    public void findFlightIndexDateAndPrint(String targetDate) {
+//        boolean somethingFound = false;
+//        for (int i = 0; i < flights.size(); i++) {
+//            if (flights.get(i).getDate().equals(targetDate)) {
+//                if (!somethingFound) {
+//                    printFlightHeader();
+//                }
+//                somethingFound = true;
+//                printFlight(i, flights);
+//            }
+//        }
+//        if (!somethingFound) {
+//            System.out.println("nothing found !");
+//        }
+//    }
+//
+//    public void findFlightIndexTimeAndPrint(String targetTime) {
+//        boolean somethingFound = false;
+//        for (int i = 0; i < flights.size(); i++) {
+//            if (flights.get(i).getTime().equals(targetTime)) {
+//                if (!somethingFound) {
+//                    printFlightHeader();
+//                }
+//                somethingFound = true;
+//                printFlight(i, flights);
+//            }
+//        }
+//        if (!somethingFound) {
+//            System.out.println("nothing found !");
+//        }
+//    }
 
     public void updateFlight() {
         Scanner scanner = new Scanner(System.in);
@@ -305,8 +315,7 @@ public class Flights {
                 -->""");
 
         int key = scanner.nextInt();
-        Flight tempFlight = new Flight();
-        tempFlight = flights.get(flightIndex);
+        Flight tempFlight = flights.get(flightIndex);
 
         switch (key) {
             case 1:
@@ -394,20 +403,33 @@ public class Flights {
     public void addFlight() {
         Scanner scan = new Scanner(System.in);
         Flight newFlight = new Flight();
+
         System.out.println("Enter Flight Id");
         newFlight.setFlightID(scan.nextLine());
+
+        if (findFlightIndex(newFlight.getFlightID()) != -1) {
+            System.out.println("this id has taken");
+            return;
+        }
+
         System.out.println("Enter The Origen");
         newFlight.setOrigen(scan.nextLine());
+
         System.out.println("enter the Destination");
         newFlight.setDestination(scan.nextLine());
+
         System.out.println("enter the date");
         newFlight.setDate(scan.nextLine());
+
         System.out.println("enter Time");
         newFlight.setTime(scan.nextLine());
+
         System.out.println("enter Price");
         newFlight.setPrice(scan.nextInt());
+
         System.out.println("enter number of seats");
         newFlight.setSeats(scan.nextInt());
+
         newFlight.setBookedSeats(0);
 
 

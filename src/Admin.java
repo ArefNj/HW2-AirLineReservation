@@ -3,6 +3,9 @@ import java.util.Scanner;
 public class Admin {
     private static Admin singletonAdmin;
 
+    private Admin() {
+    }
+
     public static Admin getInstance() {
         if (singletonAdmin == null) {
             singletonAdmin = new Admin();
@@ -10,10 +13,7 @@ public class Admin {
         return singletonAdmin;
     }
 
-    private Admin() {
-    }
-
-    public void admin(Users users, Flights flights) {
+    public void admin(Flights flights) {
         Scanner scan = new Scanner(System.in);
         new Menu().printAdminMenu();
         int key = scan.nextInt();
@@ -44,7 +44,7 @@ public class Admin {
                 new Menu().pause();
                 break;
         }
-        this.admin(users, flights);
+        this.admin(flights);
 
     }
 }

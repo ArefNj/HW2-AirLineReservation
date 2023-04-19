@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Users {
-    private ArrayList<Passenger> users = new ArrayList<Passenger>(10);
+    private ArrayList<Passenger> users = new ArrayList<>(10);
 
     /**
      * Searching an id form User ArrayList
@@ -40,6 +40,12 @@ public class Users {
         return -1;
     }
 
+    /**
+     * Booking section for Booking Flights
+     *
+     * @param passengerIndex Which Passenger buy Ticket
+     * @param flights        all flights
+     */
     public void booking(int passengerIndex, Flights flights) {
         Scanner scan = new Scanner(System.in);
 
@@ -152,7 +158,7 @@ public class Users {
 
         passenger.setPassengerID(id);
         passenger.setPassword(password);
-        ArrayList<Flight> passengerFlight = new ArrayList<Flight>();
+        ArrayList<Flight> passengerFlight = new ArrayList<>();
         passenger.setPassengerFlights(passengerFlight);
         passenger.setCharge(0);
 
