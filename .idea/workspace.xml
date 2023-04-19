@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="188a9340-50cf-4872-a7bc-f2a91a06ed3b" name="Changes" comment="add feature multi-filtering in passenger section for checking flights">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Flight.java" afterDir="false" />
+    <list default="true" id="188a9340-50cf-4872-a7bc-f2a91a06ed3b" name="Changes" comment="some Comments">
       <change beforePath="$PROJECT_DIR$/src/Flights.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Flights.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Passenger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +60,7 @@
       <workItem from="1681620640994" duration="4402000" />
       <workItem from="1681713461142" duration="650000" />
       <workItem from="1681883909265" duration="9290000" />
-      <workItem from="1681905754466" duration="4831000" />
+      <workItem from="1681905754466" duration="5665000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1681280786975</created>
@@ -144,7 +139,28 @@
       <option name="project" value="LOCAL" />
       <updated>1681907025881</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add comments and price section">
+      <created>1681911013019</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681911013019</updated>
+    </task>
+    <task id="LOCAL-00013" summary="some Comments">
+      <created>1681911125878</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681911125878</updated>
+    </task>
+    <task id="LOCAL-00014" summary="some Comments">
+      <created>1681911245365</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1681911245365</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +189,8 @@
     <MESSAGE value="clean code style" />
     <MESSAGE value="editing remove section and add some features" />
     <MESSAGE value="add feature multi-filtering in passenger section for checking flights" />
-    <option name="LAST_COMMIT_MESSAGE" value="add feature multi-filtering in passenger section for checking flights" />
+    <MESSAGE value="add comments and price section" />
+    <MESSAGE value="some Comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="some Comments" />
   </component>
 </project>

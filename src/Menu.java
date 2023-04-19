@@ -98,7 +98,7 @@ public class Menu {
             this.signUp();
         }
 
-        System.out.println(" Enter your password");
+        System.out.println("Enter your password");
         String tempPass = scan.nextLine();
 
         userList.creatNewUser(tempId, tempPass);
@@ -116,7 +116,7 @@ public class Menu {
         String tempId = scan.nextLine();
 
 
-        System.out.println(" Enter your password");
+        System.out.println("Enter your password");
         String tempPass = scan.nextLine();
         // Admin Entry point
         if (tempId.equals("Admin") && tempPass.equals("Admin")) {

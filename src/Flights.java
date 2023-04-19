@@ -262,26 +262,26 @@ public class Flights {
         newFlight.setFlightID(scan.nextLine());
 
         if (findFlightIndex(newFlight.getFlightID()) != -1) {
-            System.out.println("this id has taken");
+            System.out.println("This id has taken");
             return;
         }
 
         System.out.println("Enter The Origen");
         newFlight.setOrigen(scan.nextLine());
 
-        System.out.println("enter the Destination");
+        System.out.println("Enter the Destination");
         newFlight.setDestination(scan.nextLine());
 
-        System.out.println("enter the date");
+        System.out.println("Enter the date");
         newFlight.setDate(scan.nextLine());
 
-        System.out.println("enter Time");
+        System.out.println("Enter Time");
         newFlight.setTime(scan.nextLine());
 
-        System.out.println("enter Price");
+        System.out.println("Enter Price");
         newFlight.setPrice(scan.nextInt());
 
-        System.out.println("enter number of seats");
+        System.out.println("Enter number of seats");
         newFlight.setSeats(scan.nextInt());
 
         newFlight.setBookedSeats(0);
