@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="188a9340-50cf-4872-a7bc-f2a91a06ed3b" name="Changes" comment="add Booked Seat section and penalty for remove flight from passenger Flight list" />
+    <list default="true" id="188a9340-50cf-4872-a7bc-f2a91a06ed3b" name="Changes" comment="change for loop to enchanted one and removing some useless methods">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,18 +31,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Advance Programing/HW2-AirLineReservation&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Advance Programing/Kargah",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -54,7 +56,8 @@
       <workItem from="1681232133189" duration="18723000" />
       <workItem from="1681308372044" duration="7022000" />
       <workItem from="1681318656836" duration="12769000" />
-      <workItem from="1681620640994" duration="3845000" />
+      <workItem from="1681620640994" duration="4402000" />
+      <workItem from="1681713461142" duration="650000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1681280786975</created>
@@ -98,7 +101,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681624471084</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="change switch case to enchanted one">
+      <created>1681624673507</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681624673507</updated>
+    </task>
+    <task id="LOCAL-00008" summary="change for loop to enchanted one and removing some useless methods">
+      <created>1681625057134</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681625057134</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +139,8 @@
     <MESSAGE value="add remove section" />
     <MESSAGE value="add filter search section" />
     <MESSAGE value="add Booked Seat section and penalty for remove flight from passenger Flight list" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Booked Seat section and penalty for remove flight from passenger Flight list" />
+    <MESSAGE value="change switch case to enchanted one" />
+    <MESSAGE value="change for loop to enchanted one and removing some useless methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="change for loop to enchanted one and removing some useless methods" />
   </component>
 </project>

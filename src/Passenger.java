@@ -8,29 +8,34 @@ public class Passenger {
     private int charge;
 
 
-
-
     public String getPassengerID() {
         return passengerID;
     }
+
     public void setPassengerID(String passengerID) {
         this.passengerID = passengerID;
     }
+
     public String getPassword() {
         return Password;
     }
+
     public void setPassword(String password) {
         Password = password;
     }
+
     public ArrayList<Flight> getPassengerFlights() {
         return passengerFlights;
     }
+
     public void setPassengerFlights(ArrayList<Flight> passengerFlights) {
         this.passengerFlights = passengerFlights;
     }
+
     public int getCharge() {
         return charge;
     }
+
     public void setCharge(int charge) {
         this.charge = charge;
     }

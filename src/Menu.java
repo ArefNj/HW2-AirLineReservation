@@ -6,7 +6,7 @@ public class Menu {
     private Users userList = new Users();
     private Flights flightsList = new Flights();
 
-    public void printMainMenu(){
+    public void printMainMenu() {
         System.out.print("""
                 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
                            WELCOME TO AIRLINE RESERVATION SYSTEM
@@ -20,7 +20,7 @@ public class Menu {
                 -->\040""");
     }
 
-    public void printAdminMenu(){
+    public void printAdminMenu() {
         System.out.print("""
                 ::::::::::::::::::::::::::::::::::::::::
                            Admin MENU OPTIONS
@@ -37,7 +37,7 @@ public class Menu {
                 -->\040""");
     }
 
-    public void printPassengerMenu(){
+    public void printPassengerMenu() {
         System.out.print("""
                 ::::::::::::::::::::::::::::::::::::::::
                          PASSENGER MENU OPTIONS
@@ -56,26 +56,26 @@ public class Menu {
                 -->\040""");
     }
 
-    public void printSignUpMenuHeader(){
+    public void printSignUpMenuHeader() {
         System.out.print("""
                 ::::::::::::::::::::::::::::::::::::::::
                                Sign Up Menu
                 ::::::::::::::::::::::::::::::::::::::::
                  ......................................
-          
-                
+                          
+                                
                 """);
     }
 
-    public void printSignInMenuHeader(){
+    public void printSignInMenuHeader() {
         System.out.print("""
                 ::::::::::::::::::::::::::::::::::::::::
                                Sign In Menu
                 ::::::::::::::::::::::::::::::::::::::::
                  ......................................
-          
-                
-                
+                          
+                                
+                                
                 """);
     }
 
@@ -96,16 +96,18 @@ public class Menu {
         this.menu();
     }
 
-    public void signUp(){
+    public void signUp() {
         Scanner scan = new Scanner(System.in);
         printSignUpMenuHeader();
 
         System.out.println("Enter your ID ( Enter 'X' to Exit )");
         String tempId = scan.nextLine();
 
-        if (tempId.equals("X")){ this.menu(); }
+        if (tempId.equals("X")) {
+            this.menu();
+        }
 
-        if (userList.searchUser(tempId) || tempId.equals("Admin")){
+        if (userList.searchUser(tempId) || tempId.equals("Admin")) {
             System.out.println("The User name was Token");
             pause();
             this.signUp();
@@ -114,14 +116,14 @@ public class Menu {
         System.out.println(" Enter your password");
         String tempPass = scan.nextLine();
 
-        userList.creatNewUser(tempId,tempPass);
+        userList.creatNewUser(tempId, tempPass);
 
         this.menu();
 
 
     }
 
-    public void signIn(){
+    public void signIn() {
         Scanner scan = new Scanner(System.in);
         printSignInMenuHeader();
 
@@ -132,20 +134,19 @@ public class Menu {
         System.out.println(" Enter your password");
         String tempPass = scan.nextLine();
         // Admin Entry point
-        if (tempId.equals("Admin") && tempPass.equals("Admin")){
+        if (tempId.equals("Admin") && tempPass.equals("Admin")) {
             Admin admin = Admin.getInstance();
-            admin.admin(userList,flightsList);
+            admin.admin(userList, flightsList);
             System.out.println("Have Nice Day !");
             pause();
             this.menu();
 
 
-
         }
         // else Users
-        else{
-        int indexKey = userList.findUserIndex(tempId, tempPass);
-            if (indexKey == -1){
+        else {
+            int indexKey = userList.findUserIndex(tempId, tempPass);
+            if (indexKey == -1) {
                 System.out.println("Entry id or password is wrong");
                 pause();
                 this.menu();
@@ -156,7 +157,7 @@ public class Menu {
 
     }
 
-    public void passengerMenu(int passengerIndex){
+    public void passengerMenu(int passengerIndex) {
         printPassengerMenu();
         Scanner scan = new Scanner(System.in);
         int key = scan.nextInt();
@@ -200,7 +201,8 @@ public class Menu {
 
 
     }
-    public void pause(){
+
+    public void pause() {
         System.out.println("Press Any Key To Continue...");
         new java.util.Scanner(System.in).nextLine();
     }

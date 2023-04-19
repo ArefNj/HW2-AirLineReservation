@@ -2,7 +2,9 @@ import java.util.Scanner;
 
 public class Admin {
     private static Admin singletonAdmin;
-    private Admin() {}
+
+    private Admin() {
+    }
 
     public static Admin getInstance() {
         if (singletonAdmin == null) {
@@ -10,12 +12,13 @@ public class Admin {
         }
         return singletonAdmin;
     }
+
     public void admin(Users users, Flights flights) {
         Scanner scan = new Scanner(System.in);
         new Menu().printAdminMenu();
         int key = scan.nextInt();
 
-        switch (key){
+        switch (key) {
             // Add
             case 1:
                 flights.addFlight();
@@ -41,7 +44,7 @@ public class Admin {
                 new Menu().pause();
                 break;
         }
-        this.admin(users,flights);
+        this.admin(users, flights);
 
     }
 }
