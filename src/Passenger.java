@@ -6,6 +6,7 @@ public class Passenger {
     private String Password;
     private ArrayList<Flight> passengerFlights = new ArrayList<>();
     private int charge;
+    private Tickets tickets;
 
 
     public String getPassengerID() {
@@ -40,4 +41,11 @@ public class Passenger {
         this.charge = charge;
     }
 
+    public Tickets getTickets() {
+        return tickets;
+    }
+
+    public void setTickets(Tickets tickets) {
+        this.tickets = tickets;
+    }
 }

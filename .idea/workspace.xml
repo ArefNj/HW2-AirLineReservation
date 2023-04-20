@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="188a9340-50cf-4872-a7bc-f2a91a06ed3b" name="Changes" comment="some Comments">
-      <change beforePath="$PROJECT_DIR$/src/Flights.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Flights.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ticket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tickets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Passenger.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +44,11 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JAVA&quot;
+    ]
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -60,7 +67,8 @@
       <workItem from="1681620640994" duration="4402000" />
       <workItem from="1681713461142" duration="650000" />
       <workItem from="1681883909265" duration="9290000" />
-      <workItem from="1681905754466" duration="5665000" />
+      <workItem from="1681905754466" duration="7785000" />
+      <workItem from="1681967025238" duration="514000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1681280786975</created>
