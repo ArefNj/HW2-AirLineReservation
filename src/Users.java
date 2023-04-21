@@ -265,7 +265,9 @@ public class Users {
         String flightID = users.get(passengerIndex).getTickets().getTickets().get(searchingIndexTicketFromPassengerTicketList).getFlightTicket().getFlightID();
 
         // refund money
-//        users.get(passengerIndex).setCharge(users.get(passengerIndex).getCharge() + users.get(passengerIndex).getPassengerFlights().getFlights().get(users.get(passengerIndex).getPassengerFlights().findFlightIndex(flightID)).getPrice() * 9 / 10);
+        int priceOfFlight = flights.getFlights().get(flights.findFlightIndex(flightID)).getPrice();
+
+        users.get(passengerIndex).setCharge(users.get(passengerIndex).getCharge() + priceOfFlight * 9 / 10);
 
         // remove seat
         flights.getFlights().get(flights.findFlightIndex(flightID)).setBookedSeats(flights.getFlights().get(flights.findFlightIndex(flightID)).getBookedSeats() - 1);
