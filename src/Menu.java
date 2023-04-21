@@ -1,11 +1,10 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
 
 
-    private Users userList = new Users();
-    private Flights flightsList = new Flights();
+    private Users AllUserList = new Users();
+    private Flights AllFlightsList = new Flights();
 
 
     public void printSignUpMenuHeader() {
@@ -93,7 +92,7 @@ public class Menu {
             this.menu();
         }
 
-        if (userList.findUserIndex(tempId) != -1 || tempId.equals("Admin")) {
+        if (AllUserList.findUserIndex(tempId) != -1 || tempId.equals("Admin")) {
             System.out.println("The User name was Token");
             pause();
             this.signUp();
@@ -102,7 +101,7 @@ public class Menu {
         System.out.println("Enter your password");
         String tempPass = scan.nextLine();
 
-        userList.creatNewUser(tempId, tempPass);
+        AllUserList.creatNewUser(tempId, tempPass);
 
         this.menu();
 
@@ -122,7 +121,7 @@ public class Menu {
         // Admin Entry point
         if (tempId.equals("Admin") && tempPass.equals("Admin")) {
             Admin admin = Admin.getInstance();
-            admin.admin(flightsList);
+            admin.admin(AllFlightsList);
             System.out.println("Have Nice Day !");
             pause();
             this.menu();
@@ -131,7 +130,7 @@ public class Menu {
         }
         // else Users
         else {
-            int indexKey = userList.findUserIndex(tempId, tempPass);
+            int indexKey = AllUserList.findUserIndex(tempId, tempPass);
             if (indexKey == -1) {
                 System.out.println("Entry id or password is wrong");
                 pause();
@@ -155,22 +154,22 @@ public class Menu {
 //                System.out.print("Enter new password\n");
 //                scan.nextLine();
 //                String newPassengerPassword = scan.nextLine();
-//                userList.changePassword(passengerIndex, newPassengerPassword);
+//                AllUserList.changePassword(passengerIndex, newPassengerPassword);
 //            }
 //            // searching
-//            case 2 -> flightsList.filterFlight(flightsList.getFlights());
+//            case 2 -> AllflightsList.filterFlight(AllflightsList.getFlights());
 //
 //            // booking
-//            case 3 -> userList.booking(passengerIndex, flightsList);
+//            case 3 -> AllUserList.booking(passengerIndex, AllflightsList);
 //
 //            // cancel
-//            case 4 -> userList.removeFromBookedList(passengerIndex, flightsList);
+//            case 4 -> AllUserList.removeFromBookedList(passengerIndex, AllflightsList);
 //
 //            // see booked
-//            case 5 -> userList.printBookedList(passengerIndex, flightsList);
+//            case 5 -> AllUserList.printBookedList(passengerIndex, AllflightsList);
 //
 //            // add charge
-//            case 6 -> userList.chargeAccount(passengerIndex);
+//            case 6 -> AllUserList.chargeAccount(passengerIndex);
 //            case 0 -> {
 //                System.out.println(" Have nice day !");
 //                pause();
@@ -188,22 +187,22 @@ public class Menu {
                 System.out.print("Enter new password\n");
                 scan.nextLine();
                 String newPassengerPassword = scan.nextLine();
-                userList.changePassword(passengerIndex, newPassengerPassword);
+                AllUserList.changePassword(passengerIndex, newPassengerPassword);
             }
             // searching
-            case 2 -> flightsList.filterFlight(flightsList.getFlights());
+            case 2 -> AllFlightsList.filterFlight(AllFlightsList.getFlights());
 
             // booking
-            case 3 -> userList.bookingTicket(flightsList, userList.getUsers().get(passengerIndex));
+            case 3 -> AllUserList.bookingTicket(AllFlightsList, AllUserList.getUsers().get(passengerIndex));
 
             // cancel
-            case 4 -> userList.cancellationTicket(passengerIndex, userList.getUsers().get(passengerIndex).getPassengerFlights());
+            case 4 -> AllUserList.cancellationTicket(passengerIndex,AllFlightsList);
 
             // see booked
-            case 5 -> userList.printBookedTicket(passengerIndex, flightsList);
+            case 5 -> AllUserList.printBookedTicket(passengerIndex, AllFlightsList);
 
             // add charge
-            case 6 -> userList.chargeAccount(passengerIndex);
+            case 6 -> AllUserList.chargeAccount(passengerIndex);
             case 0 -> {
                 System.out.println(" Have nice day !");
                 pause();

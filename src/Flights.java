@@ -136,12 +136,10 @@ public class Flights {
         return -1;
     }
 
-    public int findFlightIndex(String targetFlightId, int ticketId) {
-        int ticketIndex;
+    public int findFlightIndexWithFlightIdAndTicketId(String targetFlightId, int ticketId) {
         for (int i = 0; i < flights.size(); i++) {
             if (flights.get(i).getFlightID().equals(targetFlightId)) {
-                ticketIndex = flights.get(i).getTickets().ticketIndex(ticketId);
-                if (flights.get(i).getTickets().getTickets().get(ticketIndex).getTicketId() == ticketId){
+                if (flights.get(i).getTicket().getTicketId() == ticketId){
                     return i;
                 }
             }
@@ -184,6 +182,51 @@ public class Flights {
     }
 
 
+
+    // Administrator methods
+
+    /**
+     * Add flight to flight List
+     */
+    public void addFlight() {
+        Scanner scan = new Scanner(System.in);
+        Flight newFlight = new Flight();
+
+        System.out.println("Enter Flight Id");
+        newFlight.setFlightID(scan.nextLine());
+
+        if (findFlightIndex(newFlight.getFlightID()) != -1) {
+            System.out.println("This id has taken");
+            return;
+        }
+
+        System.out.println("Enter The Origen");
+        newFlight.setOrigen(scan.nextLine());
+
+        System.out.println("Enter the Destination");
+        newFlight.setDestination(scan.nextLine());
+
+        System.out.println("Enter the date");
+        newFlight.setDate(scan.nextLine());
+
+        System.out.println("Enter Time");
+        newFlight.setTime(scan.nextLine());
+
+        System.out.println("Enter Price");
+        newFlight.setPrice(scan.nextInt());
+
+        System.out.println("Enter number of seats");
+        newFlight.setSeats(scan.nextInt());
+
+        newFlight.setBookedSeats(0);
+
+
+        flights.add(newFlight);
+    }
+
+    /**
+     * Update flight form flight list
+     */
     public void updateFlight() {
         Scanner scanner = new Scanner(System.in);
         System.out.println(" Please enter the Flight Id Which flight do yo want to update ");
@@ -274,6 +317,10 @@ public class Flights {
 
     }
 
+
+    /**
+     * remove a flight from a flight list
+     */
     public void removeFlight() {
         Scanner scanner = new Scanner(System.in);
         System.out.println(" Please enter the Flight Id Which flight do yo want to remove ");
@@ -296,41 +343,6 @@ public class Flights {
 
     }
 
-    public void addFlight() {
-        Scanner scan = new Scanner(System.in);
-        Flight newFlight = new Flight();
-
-        System.out.println("Enter Flight Id");
-        newFlight.setFlightID(scan.nextLine());
-
-        if (findFlightIndex(newFlight.getFlightID()) != -1) {
-            System.out.println("This id has taken");
-            return;
-        }
-
-        System.out.println("Enter The Origen");
-        newFlight.setOrigen(scan.nextLine());
-
-        System.out.println("Enter the Destination");
-        newFlight.setDestination(scan.nextLine());
-
-        System.out.println("Enter the date");
-        newFlight.setDate(scan.nextLine());
-
-        System.out.println("Enter Time");
-        newFlight.setTime(scan.nextLine());
-
-        System.out.println("Enter Price");
-        newFlight.setPrice(scan.nextInt());
-
-        System.out.println("Enter number of seats");
-        newFlight.setSeats(scan.nextInt());
-
-        newFlight.setBookedSeats(0);
-
-
-        flights.add(newFlight);
-    }
 
     public ArrayList<Flight> getFlights() {
         return flights;
