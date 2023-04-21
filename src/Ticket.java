@@ -5,20 +5,6 @@ public class Ticket {
     private Flight flightTicket = new Flight();
     private boolean ticketIdSet = false;
 
-    // setter and getter
-    public int getTicketId() {
-        return ticketId;
-    }
-    public void setTicketId(int ticketId) {
-        ticketId = ticketId;
-    }
-    public Flight getFlightTicket() {
-        return flightTicket;
-    }
-    public void setFlightTicket(Flight flightTicket) {
-        this.flightTicket = flightTicket;
-    }
-
     /**
      * Generate Ticket id
      */
@@ -30,5 +16,18 @@ public class Ticket {
         }
     }
 
+    /** Setter & Getters */
+
+    public int getTicketId() {
+        return ticketId;
+    }
+
+    public Flight getFlightTicket() {
+        return flightTicket;
+    }
+
+    public void setFlightTicket(Flight flightTicket) {
+        this.flightTicket = flightTicket;
+    }
 
 }

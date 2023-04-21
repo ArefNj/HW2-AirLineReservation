@@ -2,9 +2,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Flights {
-    private ArrayList<Flight> flights = new ArrayList<>();
+    private final ArrayList<Flight> flights = new ArrayList<>();
 
-
+    /**
+     * search Filter section
+     *
+     * @param flightsList All Flights
+     */
     public void filterFlight(ArrayList<Flight> flightsList) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("""
@@ -82,18 +86,38 @@ public class Flights {
 
     }
 
+    /**
+     * print header for search filter section and admin Flight schedules section
+     */
     public void printFlightHeader() {
         System.out.println("|FlightId   |Origin     |Destination  |Date        |Time       |Price      |Seats |Booked Seats|");
     }
+
+    /**
+     * print Flight booked with ticket IDs
+     */
     public void printFlightHeaderTickets() {
         System.out.println("|FlightId   |Origin     |Destination  |Date        |Time       |Price      |Seats |Booked Seats|Ticket Id|");
     }
+
+    /**
+     * print all flight which passed the method
+     *
+     * @param passengerFlight the list which wanna to print
+     */
     public void printFlight(ArrayList<Flight> passengerFlight) {
         for (int i = 0; i < passengerFlight.size(); i++) {
             printFlight(i, passengerFlight);
         }
         new Menu().pause();
     }
+
+    /**
+     * print a specific flight details
+     *
+     * @param flightIndex     the index of flight list
+     * @param passengerFlight the passenger flight list
+     */
     public void printFlight(int flightIndex, ArrayList<Flight> passengerFlight) {
         System.out.println("................................................................................................");
         System.out.printf("|%-11s|%-11s|%-13s|%-12s|%-11s|%-,11d|%-6d|%-12d|\n"
@@ -106,27 +130,35 @@ public class Flights {
                 , passengerFlight.get(flightIndex).getSeats()
                 , passengerFlight.get(flightIndex).getBookedSeats());
     }
+
+    /**
+     * print flight details with ticket ID
+     *
+     * @param passengerFlight the passenger flight list
+     * @param ticketId        the ticket ID of flight
+     */
     public void printFlight(Flight passengerFlight, int ticketId) {
         System.out.println("..........................................................................................................");
-        System.out.printf("|%-11s|%-11s|%-13s|%-12s|%-11s|%-,11d|%-6d|%-12d|%-9d|\n",
-                passengerFlight.getFlightID(),
-                passengerFlight.getOrigen(),
-                passengerFlight.getDestination(),
-                passengerFlight.getDate(),
-                passengerFlight.getTime(),
-                passengerFlight.getPrice(),
-                passengerFlight.getSeats(),
-                passengerFlight.getBookedSeats(),
-                ticketId);
+        System.out.printf("|%-11s|%-11s|%-13s|%-12s|%-11s|%-,11d|%-6d|%-12d|%-9d|\n"
+                , passengerFlight.getFlightID()
+                , passengerFlight.getOrigen()
+                , passengerFlight.getDestination()
+                , passengerFlight.getDate()
+                , passengerFlight.getTime()
+                , passengerFlight.getPrice()
+                , passengerFlight.getSeats()
+                , passengerFlight.getBookedSeats()
+                , ticketId);
 
 
     }
 
-    public void setFlights(ArrayList<Flight> flights) {
-        this.flights = flights;
-    }
-
-
+    /**
+     * search Flight index by Flight ID
+     *
+     * @param targetFlightId the flight ID that you wants to find
+     * @return the index the target ( return -1 if it was not found )
+     */
     public int findFlightIndex(String targetFlightId) {
         for (int i = 0; i < flights.size(); i++) {
             if (flights.get(i).getFlightID().equals(targetFlightId)) {
@@ -136,17 +168,12 @@ public class Flights {
         return -1;
     }
 
-    public int findFlightIndexWithFlightIdAndTicketId(String targetFlightId, int ticketId) {
-        for (int i = 0; i < flights.size(); i++) {
-            if (flights.get(i).getFlightID().equals(targetFlightId)) {
-                if (flights.get(i).getTicket().getTicketId() == ticketId){
-                    return i;
-                }
-            }
-        }
-        return -1;
-    }
-
+    /**
+     * filter flights by origen
+     *
+     * @param targetFlightOrigen the target origen
+     * @param filterFlights      the Flights list
+     */
     public void filterFlightsByOrigen(String targetFlightOrigen, ArrayList<Flight> filterFlights) {
 
 
@@ -157,6 +184,12 @@ public class Flights {
         }
     }
 
+    /**
+     * filter flights by destination
+     *
+     * @param targetDestination the target destination
+     * @param filterFlights     the Flights list
+     */
     public void filterFlightsByDestination(String targetDestination, ArrayList<Flight> filterFlights) {
         for (int i = flights.size() - 1; i >= 0; i--) {
             if (!flights.get(i).getDestination().equals(targetDestination)) {
@@ -165,6 +198,12 @@ public class Flights {
         }
     }
 
+    /**
+     * filter flights by date
+     *
+     * @param targetDate    the target date
+     * @param filterFlights the Flights list
+     */
     public void filterFlightsByDate(String targetDate, ArrayList<Flight> filterFlights) {
         for (int i = flights.size() - 1; i >= 0; i--) {
             if (!flights.get(i).getDate().equals(targetDate)) {
@@ -173,6 +212,12 @@ public class Flights {
         }
     }
 
+    /**
+     * filter flights by time
+     *
+     * @param targetTime    the target time
+     * @param filterFlights the Flights list
+     */
     public void filterFlightsByTime(String targetTime, ArrayList<Flight> filterFlights) {
         for (int i = flights.size() - 1; i >= 0; i--) {
             if (!flights.get(i).getTime().equals(targetTime)) {
@@ -180,7 +225,6 @@ public class Flights {
             }
         }
     }
-
 
 
     // Administrator methods
@@ -303,7 +347,7 @@ public class Flights {
                 System.out.println("Enter Seats");
                 scanner.nextLine();
                 int tempSeats = scanner.nextInt();
-                tempFlight.setPrice(tempSeats);
+                tempFlight.setSeats(tempSeats);
                 flights.set(flightIndex, tempFlight);
                 break;
             case 0:
@@ -316,7 +360,6 @@ public class Flights {
         }
 
     }
-
 
     /**
      * remove a flight from a flight list
@@ -343,7 +386,7 @@ public class Flights {
 
     }
 
-
+    /* getter */
     public ArrayList<Flight> getFlights() {
         return flights;
     }

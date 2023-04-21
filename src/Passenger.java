@@ -1,13 +1,12 @@
-import java.util.ArrayList;
-
 public class Passenger {
 
     private String passengerID;
     private String Password;
-    private Flights passengerFlights = new Flights();
     private int charge;
-    private Tickets tickets = new Tickets();
+    private final Tickets tickets = new Tickets();
 
+
+    /** Setters & Getters */
 
     public String getPassengerID() {
         return passengerID;
@@ -25,12 +24,7 @@ public class Passenger {
         Password = password;
     }
 
-    public Flights getPassengerFlights() {
-        return passengerFlights;
-    }
-
-    public void setPassengerFlights(Flights passengerFlights) {
-        this.passengerFlights = passengerFlights;
+    public void setPassengerFlights() {
     }
 
     public int getCharge() {
@@ -45,7 +39,4 @@ public class Passenger {
         return tickets;
     }
 
-    public void setTickets(Tickets tickets) {
-        this.tickets = tickets;
-    }
 }

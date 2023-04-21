@@ -1,16 +1,7 @@
 import java.util.ArrayList;
 
 public class Tickets {
-    private ArrayList<Ticket> tickets = new ArrayList<>();
-
-    // setter and getter
-    public ArrayList<Ticket> getTickets() {
-        return tickets;
-    }
-    public void setTickets(ArrayList<Ticket> tickets) {
-        this.tickets = tickets;
-    }
-
+    private final ArrayList<Ticket> tickets = new ArrayList<>();
 
     /**
      * searching for index of ticketId in ticketList
@@ -30,16 +21,22 @@ public class Tickets {
     /**
      * remove a ticket from a TicketList
      * Using thicketIndex to find the index of ticket
+     *
      * @param ticketId the target ticket ID
      */
     public void removeTicket(int ticketId) {
         int indexOfTicketInTicketList = ticketIndex(ticketId);
-        if (indexOfTicketInTicketList != -1){
+        if (indexOfTicketInTicketList != -1) {
             tickets.remove(indexOfTicketInTicketList);
-        }
-        else {
+        } else {
             System.out.println("ticket Not Found");
         }
     }
+
+    /** Setter & Getter */
+    public ArrayList<Ticket> getTickets() {
+        return tickets;
+    }
+
 
 }

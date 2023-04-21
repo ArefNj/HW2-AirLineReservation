@@ -7,10 +7,11 @@ public class Flight {
     private int price;
     private int seats;
     private int bookedSeats;
-    private Ticket ticket ;
 
 
-    // SETTER & GETTER
+    /**
+     * Setter & Getter
+     */
     public String getFlightID() {
         return flightID;
     }
@@ -75,12 +76,7 @@ public class Flight {
         this.bookedSeats = bookedSeats;
     }
 
-    public Ticket getTicket() {
-        return ticket;
-    }
-
-    public void setTicket(Ticket ticket) {
-        this.ticket = ticket;
+    public void setTicket() {
     }
 
 
