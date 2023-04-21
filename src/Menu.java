@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
@@ -148,6 +149,39 @@ public class Menu {
         int key = scan.nextInt();
 
 
+//        switch (key) {
+//            // change Password
+//            case 1 -> {
+//                System.out.print("Enter new password\n");
+//                scan.nextLine();
+//                String newPassengerPassword = scan.nextLine();
+//                userList.changePassword(passengerIndex, newPassengerPassword);
+//            }
+//            // searching
+//            case 2 -> flightsList.filterFlight(flightsList.getFlights());
+//
+//            // booking
+//            case 3 -> userList.booking(passengerIndex, flightsList);
+//
+//            // cancel
+//            case 4 -> userList.removeFromBookedList(passengerIndex, flightsList);
+//
+//            // see booked
+//            case 5 -> userList.printBookedList(passengerIndex, flightsList);
+//
+//            // add charge
+//            case 6 -> userList.chargeAccount(passengerIndex);
+//            case 0 -> {
+//                System.out.println(" Have nice day !");
+//                pause();
+//                this.menu();
+//            }
+//            default -> {
+//                System.out.println("please check your entry");
+//                pause();
+//                this.passengerMenu(passengerIndex);
+//            }
+//        }
         switch (key) {
             // change Password
             case 1 -> {
@@ -160,13 +194,13 @@ public class Menu {
             case 2 -> flightsList.filterFlight(flightsList.getFlights());
 
             // booking
-            case 3 -> userList.booking(passengerIndex, flightsList);
+            case 3 -> userList.bookingTicket(flightsList, userList.getUsers().get(passengerIndex));
 
             // cancel
-            case 4 -> userList.removeFromBookedList(passengerIndex, flightsList);
+            case 4 -> userList.cancellationTicket(passengerIndex, userList.getUsers().get(passengerIndex).getPassengerFlights());
 
             // see booked
-            case 5 -> userList.printBookedList(passengerIndex, flightsList);
+            case 5 -> userList.printBookedTicket(passengerIndex, flightsList);
 
             // add charge
             case 6 -> userList.chargeAccount(passengerIndex);
@@ -181,9 +215,7 @@ public class Menu {
                 this.passengerMenu(passengerIndex);
             }
         }
-
         this.passengerMenu(passengerIndex);
-
 
     }
 

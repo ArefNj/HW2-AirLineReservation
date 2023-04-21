@@ -7,6 +7,8 @@ public class Flight {
     private int price;
     private int seats;
     private int bookedSeats;
+    private Tickets tickets = new Tickets();
+
 
     // SETTER & GETTER
     public String getFlightID() {
@@ -72,4 +74,13 @@ public class Flight {
     public void setBookedSeats(int bookedSeats) {
         this.bookedSeats = bookedSeats;
     }
+
+    public Tickets getTickets() {
+        return tickets;
+    }
+
+    public void setTickets(Tickets tickets) {
+        this.tickets = tickets;
+    }
+
 }

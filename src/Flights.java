@@ -85,23 +85,65 @@ public class Flights {
     public void printFlightHeader() {
         System.out.println("|FlightId   |Origin     |Destination  |Date        |Time       |Price      |Seats |Booked Seats|");
     }
-
+    public void printFlightHeaderTickets() {
+        System.out.println("|FlightId   |Origin     |Destination  |Date        |Time       |Price      |Seats |Booked Seats|Ticket Id|");
+    }
     public void printFlight(ArrayList<Flight> passengerFlight) {
         for (int i = 0; i < passengerFlight.size(); i++) {
             printFlight(i, passengerFlight);
         }
         new Menu().pause();
     }
-
     public void printFlight(int flightIndex, ArrayList<Flight> passengerFlight) {
         System.out.println("................................................................................................");
-        System.out.printf("|%-11s|%-11s|%-13s|%-12s|%-11s|%-,11d|%-6d|%-12d|\n", passengerFlight.get(flightIndex).getFlightID(), passengerFlight.get(flightIndex).getOrigen(), passengerFlight.get(flightIndex).getDestination(), passengerFlight.get(flightIndex).getDate(), passengerFlight.get(flightIndex).getTime(), passengerFlight.get(flightIndex).getPrice(), passengerFlight.get(flightIndex).getSeats(), passengerFlight.get(flightIndex).getBookedSeats());
+        System.out.printf("|%-11s|%-11s|%-13s|%-12s|%-11s|%-,11d|%-6d|%-12d|\n"
+                , passengerFlight.get(flightIndex).getFlightID()
+                , passengerFlight.get(flightIndex).getOrigen()
+                , passengerFlight.get(flightIndex).getDestination()
+                , passengerFlight.get(flightIndex).getDate()
+                , passengerFlight.get(flightIndex).getTime()
+                , passengerFlight.get(flightIndex).getPrice()
+                , passengerFlight.get(flightIndex).getSeats()
+                , passengerFlight.get(flightIndex).getBookedSeats());
     }
+    public void printFlight(Flight passengerFlight, int ticketId) {
+        System.out.println("..........................................................................................................");
+        System.out.printf("|%-11s|%-11s|%-13s|%-12s|%-11s|%-,11d|%-6d|%-12d|%-9d|\n",
+                passengerFlight.getFlightID(),
+                passengerFlight.getOrigen(),
+                passengerFlight.getDestination(),
+                passengerFlight.getDate(),
+                passengerFlight.getTime(),
+                passengerFlight.getPrice(),
+                passengerFlight.getSeats(),
+                passengerFlight.getBookedSeats(),
+                ticketId);
+
+
+    }
+
+    public void setFlights(ArrayList<Flight> flights) {
+        this.flights = flights;
+    }
+
 
     public int findFlightIndex(String targetFlightId) {
         for (int i = 0; i < flights.size(); i++) {
             if (flights.get(i).getFlightID().equals(targetFlightId)) {
                 return i;
+            }
+        }
+        return -1;
+    }
+
+    public int findFlightIndex(String targetFlightId, int ticketId) {
+        int ticketIndex;
+        for (int i = 0; i < flights.size(); i++) {
+            if (flights.get(i).getFlightID().equals(targetFlightId)) {
+                ticketIndex = flights.get(i).getTickets().ticketIndex(ticketId);
+                if (flights.get(i).getTickets().getTickets().get(ticketIndex).getTicketId() == ticketId){
+                    return i;
+                }
             }
         }
         return -1;

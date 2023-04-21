@@ -6,7 +6,7 @@ public class Passenger {
     private String Password;
     private ArrayList<Flight> passengerFlights = new ArrayList<>();
     private int charge;
-    private Tickets tickets;
+    private Tickets tickets = new Tickets();
 
 
     public String getPassengerID() {

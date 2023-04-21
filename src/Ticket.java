@@ -1,15 +1,19 @@
+import java.util.Random;
+
 public class Ticket {
-    private int TicketId;
+    private int ticketId;
     private Flight flightTicket;
     private Passenger passengerTicket;
 
+    private boolean ticketIdSet = false;
+
 
     public int getTicketId() {
-        return TicketId;
+        return ticketId;
     }
 
     public void setTicketId(int ticketId) {
-        TicketId = ticketId;
+        ticketId = ticketId;
     }
 
     public Flight getFlightTicket() {
@@ -28,8 +32,13 @@ public class Ticket {
         this.passengerTicket = passengerTicket;
     }
 
-
-
+    public void generateTicketId() {
+        Random random = new Random();
+        if (!ticketIdSet) {
+            ticketId = random.nextInt(100);
+            ticketIdSet = true;
+        }
+    }
 
 
 }

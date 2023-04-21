@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="188a9340-50cf-4872-a7bc-f2a91a06ed3b" name="Changes" comment="some Comments">
-      <change afterPath="$PROJECT_DIR$/src/Ticket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tickets.java" afterDir="false" />
+    <list default="true" id="188a9340-50cf-4872-a7bc-f2a91a06ed3b" name="Changes" comment="initial ticket.java and Tickets.java classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Flight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Flights.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Flights.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Passenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tickets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tickets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +72,8 @@
       <workItem from="1681713461142" duration="650000" />
       <workItem from="1681883909265" duration="9290000" />
       <workItem from="1681905754466" duration="7785000" />
-      <workItem from="1681967025238" duration="514000" />
+      <workItem from="1681967025238" duration="19959000" />
+      <workItem from="1682059190707" duration="2617000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1681280786975</created>
@@ -168,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681911245365</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="initial ticket.java and Tickets.java classes">
+      <created>1681967904729</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1681967904729</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +211,7 @@
     <MESSAGE value="add feature multi-filtering in passenger section for checking flights" />
     <MESSAGE value="add comments and price section" />
     <MESSAGE value="some Comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="some Comments" />
+    <MESSAGE value="initial ticket.java and Tickets.java classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial ticket.java and Tickets.java classes" />
   </component>
 </project>
