@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="188a9340-50cf-4872-a7bc-f2a91a06ed3b" name="Changes" comment="complaint cancellation section">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Flight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Flights.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Flights.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Passenger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tickets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tickets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users.java" afterDir="false" />
-    </list>
+    <list default="true" id="188a9340-50cf-4872-a7bc-f2a91a06ed3b" name="Changes" comment="cleanUp code and add Comment&#10;DONE!" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,7 +64,7 @@
       <workItem from="1681883909265" duration="9290000" />
       <workItem from="1681905754466" duration="7785000" />
       <workItem from="1681967025238" duration="19959000" />
-      <workItem from="1682059190707" duration="15217000" />
+      <workItem from="1682059190707" duration="16198000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1681280786975</created>
@@ -215,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682070424253</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="cleanUp code and add Comment&#10;DONE!">
+      <created>1682084507536</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1682084507536</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +250,7 @@
     <MESSAGE value="commenting" />
     <MESSAGE value="fixing cancellation section else refund section" />
     <MESSAGE value="complaint cancellation section" />
-    <option name="LAST_COMMIT_MESSAGE" value="complaint cancellation section" />
+    <MESSAGE value="cleanUp code and add Comment&#10;DONE!" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanUp code and add Comment&#10;DONE!" />
   </component>
 </project>
